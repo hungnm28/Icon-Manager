@@ -1,0 +1,34 @@
+{
+    "name": "hungnm28/icon-manager",
+    "description": "This package used for manage icons",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Hungnm28\\IconManager\\": "src/"
+        },
+        "files": ["./src/helpers/includes.php"]
+    },
+    "authors": [
+        {
+            "name": "HungNM28"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "\\Hungnm28\\IconManager\\IconManagerServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "require": {},
+    "scripts": {
+        "post-package-install": [
+            "@php artisan vendor:publish --tag=icon-manager"
+        ],
+        "post-package-update": [
+            "@php artisan vendor:publish --tag=icon-manager"
+        ]
+    }
+}
