@@ -17,7 +17,7 @@ function mIcon($name, $width = 18, $height = 0, $viewBox = 0, $attribute = 0)
     if($version){
         $v = "?v=$version";
     }
-
+    if($width ==0) $width = 18;
     if ($height == 0) $height = $width;
     if ($viewBox == 0) $viewBox =  "0 0 24 24";
     if ($attribute == 0) $attribute =  "";
